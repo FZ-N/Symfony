@@ -22,15 +22,15 @@ class Cons
     private $id;
 
   /**
-    * @ORM\ManyToOne(targetEntity="Patient")
-    * @ORM\JoinColumn(nullable=false)	
-    */
+   * @ORM\OneToOne(targetEntity="Patient")
+   * @ORM\JoinColumn(name="idp",referencedColumnName="id",nullable=true,onDelete="CASCADE")
+   */
     private $patient;
 
   /**
-    * @ORM\ManyToOne(targetEntity="Docteur")
-    * @ORM\JoinColumn(nullable=false)	
-    */
+   * @ORM\OneToOne(targetEntity="Docteur")
+   * @ORM\JoinColumn(name="idd",referencedColumnName="id",nullable=true,onDelete="CASCADE")
+   */
     private $doc;
 
     /**
@@ -216,3 +216,4 @@ class Cons
         return $this->venu;
     }
 }
+

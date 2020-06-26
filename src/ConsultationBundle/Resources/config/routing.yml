@@ -1,3 +1,11 @@
 consultation_homepage:
     path:     /
     defaults: { _controller: ConsultationBundle:Default:index }
+
+cons_path:
+    resource:   "@ConsultationBundle/Resources/config/routing/cons.yml"
+    prefix: /cons
+
+ajout_cons:
+    path:     /newcons
+    defaults: { _controller: ConsultationBundle:Form:add }
