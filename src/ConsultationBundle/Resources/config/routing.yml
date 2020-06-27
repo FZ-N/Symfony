@@ -9,3 +9,7 @@ cons_path:
 ajout_cons:
     path:     /newcons
     defaults: { _controller: ConsultationBundle:Form:add }
+
+Patient_path:
+    resource:   "@ConsultationBundle/Resources/config/routing/patient.yml"
+    prefix: /patient

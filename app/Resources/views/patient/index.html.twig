@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Patients list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Phone</th>
+                <th>Adresse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for patient in patients %}
+            <tr>
+                <td><a href="{{ path('patient_show', { 'id': patient.id }) }}">{{ patient.id }}</a></td>
+                <td>{{ patient.nom }}</td>
+                <td>{{ patient.prenom }}</td>
+                <td>{{ patient.phone }}</td>
+                <td>{{ patient.adresse }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('patient_show', { 'id': patient.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('patient_edit', { 'id': patient.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('patient_new') }}">Create a new patient</a>
+        </li>
+    </ul>
+{% endblock %}

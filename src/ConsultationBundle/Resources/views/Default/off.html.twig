@@ -23,7 +23,10 @@
         </nav>
         <div  class ="container">
         {% block body %}
-        <a href="">SE CONNECTER</a>
+        <a href="http://localhost/symfony-master/web/app_dev.php/login">SE CONNECTER</a>
+            {% if app.user %}
+                <a href="{{ logout_path('main') }}">Logout</a>
+            {% endif %}
         {% endblock %}
         </div>
         {% block javascripts %}{% endblock %}
