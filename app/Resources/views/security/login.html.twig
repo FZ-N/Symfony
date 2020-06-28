@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Chifa{% endblock %}</title>
+    <link rel= "stylesheet"  href="https://bootswatch.com/4/cerulean/bootstrap.css">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Cabinet Chifa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+
+
+        </ul>
+
+    </div>
+</nav>
+<div  class ="container">
+
+    <form class="form-signin" action="{{ path('login') }}" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label for="_username" class="sr-only">Username</label>
+        <input type="text"
+               id="_username"
+               name="_username"
+               class="form-control"
+               placeholder="Username"
+               required
+               autofocus>
+
+        <label for="_password" class="sr-only">Password</label>
+        <input type="password"
+               id="_password"
+               name="_password"
+               class="form-control"
+               placeholder="Password"
+               required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+    </form>
+
+</div>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
