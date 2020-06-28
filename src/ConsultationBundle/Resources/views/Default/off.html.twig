@@ -39,7 +39,7 @@
                     <a href="{{ logout_path('main') }}" class="btn btn-danger"  style= "margin-left:700px;" >Logout</a>
                 {% else %}
                 
-                     <a href="http://localhost/symfony-master/web/app_dev.php/login" style= "margin-left:950px; color:white">SE CONNECTER</a>
+                     <a href="{{ path('login') }}" style= "margin-left:950px; color:white">SE CONNECTER</a>
                 {% endif %}
                
             </ul>
