@@ -23,10 +23,14 @@
         </nav>
         <div  class ="container">
         {% block body %}
-        <a href="http://localhost/symfony-master/web/app_dev.php/login">SE CONNECTER</a>
-            {% if app.user %}
-                <a href="{{ logout_path('main') }}">Logout</a>
-            {% endif %}
+            <center>
+            <img src="https://cn.ambafrance.org/IMG/arton23179.jpg?1569227198"
+                 width="482.5" height="315" style="padding-top: 30px ">
+            <a href="http://localhost/symfony-master/web/app_dev.php/login">SE CONNECTER</a>
+                {% if app.user %}
+                    <a href="{{ logout_path('main') }}" class="btn btn-danger">Logout</a>
+                {% endif %}
+            </center>
         {% endblock %}
         </div>
         {% block javascripts %}{% endblock %}

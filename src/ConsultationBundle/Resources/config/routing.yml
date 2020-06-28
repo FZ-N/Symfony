@@ -13,3 +13,7 @@ ajout_cons:
 Patient_path:
     resource:   "@ConsultationBundle/Resources/config/routing/patient.yml"
     prefix: /patient
+
+user_path:
+    resource:   "@ConsultationBundle/Resources/config/routing/user.yml"
+    prefix: /user

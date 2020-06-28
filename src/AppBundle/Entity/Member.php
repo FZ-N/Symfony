@@ -154,12 +154,14 @@ class Member implements UserInterface, \Serializable
 
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+        return null;
     }
 
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
     }
+
+
 }
 
