@@ -1,16 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'ConsultationBundle:Default:base.html.twig' %}
 
-{% block body %}
-    <h1>Patient creation</h1>
 
-    {{ form_start(form) }}
+
+{%block body %}
+    <center>
+        <br><br>
+        <h1> Ajouter un patient</h1>
+
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+        {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('patient_index') }}">Back to the list</a>
-        </li>
-    </ul>
-{% endblock %}
+        <input type="submit" value="Créer" class="btn btn-primary"/>
+        {{ form_end(form) }}
+        <ul>
+            <li>
+                <a href="{{ path('patient_index') }}">Retour vers la liste</a>
+            </li>
+        </ul>
+    </center>
+{%endblock body %}
