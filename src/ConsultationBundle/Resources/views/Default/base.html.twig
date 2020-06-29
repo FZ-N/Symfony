@@ -17,13 +17,13 @@
             <ul class="navbar-nav mr-auto">
          
             <li class="nav-item">
-                <a class="nav-link" href="#">Patients</a>
+                <a class="nav-link" href="{{path('patient_index')}}">Patients</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{path('cons_index')}}">Consultations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Docteurs</a>
+                <a class="nav-link" href="{{path('docteur_index')}}">Docteurs</a>
             </li>
             {% if is_granted('ROLE_ADMIN') %}
                 <li class="nav-item">

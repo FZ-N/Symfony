@@ -35,6 +35,20 @@ class Docteur
      */
     private $prenom;
 
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="specialite", type="string", length=255)
+     */
+    private $specialite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="horaire_travail", type="string", length=255)
+     */
+    private $horaire_travail;
+
 
     /**
      * Get id
@@ -96,5 +110,53 @@ class Docteur
 
     public function __toString() {
         return $this->nom;
+    }
+
+    /**
+     * Set specialite
+     *
+     * @param string $specialite
+     *
+     * @return Docteur
+     */
+    public function setSpecialite($specialite)
+    {
+        $this->specialite = $specialite;
+
+        return $this;
+    }
+
+    /**
+     * Get specialite
+     *
+     * @return string
+     */
+    public function getSpecialite()
+    {
+        return $this->specialite;
+    }
+
+    /**
+     * Set horaireTravail
+     *
+     * @param string $horaireTravail
+     *
+     * @return Docteur
+     */
+    public function setHoraireTravail($horaireTravail)
+    {
+        $this->horaire_travail = $horaireTravail;
+
+        return $this;
+    }
+
+    /**
+     * Get horaireTravail
+     *
+     * @return string
+     */
+    public function getHoraireTravail()
+    {
+        return $this->horaire_travail;
     }
 }

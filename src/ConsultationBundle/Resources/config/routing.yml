@@ -14,3 +14,11 @@ Patient_path:
 user_path:
     resource:   "@ConsultationBundle/Resources/config/routing/user.yml"
     prefix: /user
+
+docteur_path:
+    resource:   "@ConsultationBundle/Resources/config/routing/docteur.yml"
+    prefix: /docteur
+
+
+
+
