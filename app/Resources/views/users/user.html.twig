@@ -1,7 +1,7 @@
 {% extends 'ConsultationBundle:Default:base.html.twig' %}
 
 {% block body %}
-    <h1>Les utilisateurs</h1>
+    <h1>Liste des utilisateurs</h1>
     <br>
     <div class="row">
         <a href="http://localhost/symfony-master/web/app_dev.php/user/createuser" class="btn btn-primary">Créer un utilisateur</a>
@@ -11,7 +11,7 @@
         <thead>
         <tr>
             <th scope="row">ID</th>
-            <th scope="row">Username</th>
+            <th scope="row">Nom utilisateur</th>
             <th scope="row">Email</th>
             <th scope="row">Action</th>
         </tr>
@@ -23,8 +23,8 @@
                 <td><a>{{ user.username }}</a></td>
                 <td><a>{{ user.email }}</a></td>
                 <td>
-                    <a href="{{ absolute_url(asset('')) }}app_dev.php/user/updateuser/{{ user.id }}" class="btn btn-success">Edit</a>
-                    <a href="{{ absolute_url(asset('')) }}app_dev.php/user/deleteuser/{{ user.id }}" class="btn btn-danger">Delete</a>
+                    <a href="{{ absolute_url(asset('')) }}app_dev.php/user/updateuser/{{ user.id }}" class="btn btn-success">Modifier</a>
+                    <a href="{{ absolute_url(asset('')) }}app_dev.php/user/deleteuser/{{ user.id }}" class="btn btn-danger">Supprimer</a>
                 </td>
             </tr>
         {% endfor %}

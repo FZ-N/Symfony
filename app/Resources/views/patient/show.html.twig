@@ -5,10 +5,7 @@
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ patient.id }}</td>
-            </tr>
+         
             <tr>
                 <th>Nom</th>
                 <td>{{ patient.nom }}</td>
@@ -37,7 +34,7 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
         </li>
     </ul>

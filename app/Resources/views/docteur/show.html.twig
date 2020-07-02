@@ -5,10 +5,7 @@
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ docteur.id }}</td>
-            </tr>
+            
             <tr>
                 <th>Nom</th>
                 <td>{{ docteur.nom }}</td>
@@ -30,14 +27,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('docteur_index') }}">Back to the list</a>
+            <a href="{{ path('docteur_index') }}">Revenir à la liste</a>
         </li>
         <li>
-            <a href="{{ path('docteur_edit', { 'id': docteur.id }) }}">Edit</a>
+            <a href="{{ path('docteur_edit', { 'id': docteur.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
         </li>
     </ul>
