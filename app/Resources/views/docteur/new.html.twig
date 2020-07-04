@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block body %}
@@ -6,11 +7,26 @@
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <input type="submit" value="Create" />
+=======
+{% extends 'ConsultationBundle:Default:base.html.twig' %}
+
+
+{% block body %}
+    <h1>Création docteur</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="crée" />
+>>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
     {{ form_end(form) }}
 
     <ul>
         <li>
+<<<<<<< HEAD
             <a href="{{ path('docteur_index') }}">Back to the list</a>
+=======
+            <a href="{{ path('docteur_index') }}">Revenir à la liste</a>
+>>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
         </li>
     </ul>
 {% endblock %}

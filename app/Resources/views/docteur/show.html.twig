@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 {% extends 'base.html.twig' %}
+=======
+{% extends 'ConsultationBundle:Default:base.html.twig' %}
+>>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
 
 {% block body %}
     <h1>Docteur</h1>
 
     <table>
         <tbody>
+<<<<<<< HEAD
             <tr>
                 <th>Id</th>
                 <td>{{ docteur.id }}</td>
             </tr>
+=======
+            
+>>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
             <tr>
                 <th>Nom</th>
                 <td>{{ docteur.nom }}</td>
@@ -21,11 +29,19 @@
                 <th>Specialite</th>
                 <td>{{ docteur.specialite }}</td>
             </tr>
+<<<<<<< HEAD
+=======
+            <tr>
+                <th>Horaire_travail</th>
+                <td>{{ docteur.horairetravail }}</td>
+            </tr>
+>>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
         </tbody>
     </table>
 
     <ul>
         <li>
+<<<<<<< HEAD
             <a href="{{ path('docteur_index') }}">Back to the list</a>
         </li>
         <li>
@@ -34,6 +50,16 @@
         <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
+=======
+            <a href="{{ path('docteur_index') }}">Revenir à la liste</a>
+        </li>
+        <li>
+            <a href="{{ path('docteur_edit', { 'id': docteur.id }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+>>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
             {{ form_end(delete_form) }}
         </li>
     </ul>
