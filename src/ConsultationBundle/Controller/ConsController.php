@@ -78,7 +78,7 @@ class ConsController extends Controller
     public function editAction(Request $request, Cons $con)
     {
         $deleteForm = $this->createDeleteForm($con);
-        $editForm = $this->createForm('ConsultationBundle\Form\ConsType', $con);
+        $editForm = $this->createForm('ConsultationBundle\Form\ConsTypedite', $con);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

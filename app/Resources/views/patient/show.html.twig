@@ -1,14 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'ConsultationBundle:Default:base.html.twig' %}
 
 {% block body %}
     <h1>Patient</h1>
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ patient.id }}</td>
-            </tr>
+         
             <tr>
                 <th>Nom</th>
                 <td>{{ patient.nom }}</td>
@@ -30,14 +27,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('patient_index') }}">Back to the list</a>
+            <a href="{{ path('patient_index') }}">Retour vers la liste</a>
         </li>
         <li>
-            <a href="{{ path('patient_edit', { 'id': patient.id }) }}">Edit</a>
+            <a href="{{ path('patient_edit', { 'id': patient.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
         </li>
     </ul>

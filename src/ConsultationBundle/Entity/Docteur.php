@@ -35,7 +35,14 @@ class Docteur
      */
     private $prenom;
 
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="specialite", type="string", length=255)
+     */
+    private $specialite;
 
+ 
     /**
      * Get id
      *
@@ -97,4 +104,31 @@ class Docteur
     public function __toString() {
         return $this->nom;
     }
+
+    /**
+     * Set specialite
+     *
+     * @param string $specialite
+     *
+     * @return Docteur
+     */
+    public function setSpecialite($specialite)
+    {
+        $this->specialite = $specialite;
+
+        return $this;
+    }
+
+    /**
+     * Get specialite
+     *
+     * @return string
+     */
+    public function getSpecialite()
+    {
+        return $this->specialite;
+    }
+
+    
+
 }

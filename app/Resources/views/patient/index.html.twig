@@ -1,23 +1,23 @@
-{% extends 'base.html.twig' %}
+{% extends 'ConsultationBundle:Default:base.html.twig' %}
 
 {% block body %}
-    <h1>Patients list</h1>
-
-    <table>
+    <h1>Liste des patients</h1>
+    <br>
+    <button  class="btn btn-info"><a href="{{ path('patient_new') }}">Ajouter un patient</a></button>
+    <br><br><br>
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Phone</th>
-                <th>Adresse</th>
-                <th>Actions</th>
+                <th scope="row">Nom</th>
+                <th scope="row">Prenom</th>
+                <th scope="row">Tel</th>
+                <th scope="row">Adresse</th>
+                <th scope="row">Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for patient in patients %}
             <tr>
-                <td><a href="{{ path('patient_show', { 'id': patient.id }) }}">{{ patient.id }}</a></td>
                 <td>{{ patient.nom }}</td>
                 <td>{{ patient.prenom }}</td>
                 <td>{{ patient.phone }}</td>
@@ -25,10 +25,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('patient_show', { 'id': patient.id }) }}">show</a>
+                            <a href="{{ path('patient_show', { 'id': patient.id }) }}">afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('patient_edit', { 'id': patient.id }) }}">edit</a>
+                            <a href="{{ path('patient_edit', { 'id': patient.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -37,9 +37,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('patient_new') }}">Create a new patient</a>
-        </li>
-    </ul>
+
 {% endblock %}
