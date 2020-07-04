@@ -13,11 +13,7 @@ class DocteurType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-<<<<<<< HEAD
         $builder->add('nom')->add('prenom')->add('specialite');
-=======
-        $builder->add('nom')->add('prenom')->add('specialite')->add('horaire_travail');
->>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
     }/**
      * {@inheritdoc}
      */

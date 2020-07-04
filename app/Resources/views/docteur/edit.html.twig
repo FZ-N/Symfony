@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block body %}
@@ -16,30 +15,6 @@
         <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
-=======
-{% extends 'ConsultationBundle:Default:base.html.twig' %}
-
-{% block body %}
-    <br>
-
-    <h1>Modification docteur</h1>
-    <br>
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        
-
-    <ul>
-    <li>
-    <input type="submit" value="modifier" />
-    {{ form_end(edit_form) }}
-    </li>
-        <li>
-            <a href="{{ path('docteur_index') }}">Revenir à la liste</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="supprimer">
->>>>>>> 6e1192163f026ab45b6db1166eddfa5554ea6e1c
             {{ form_end(delete_form) }}
         </li>
     </ul>
