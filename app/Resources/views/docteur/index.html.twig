@@ -1,9 +1,12 @@
-{% extends 'base.html.twig' %}
+{% extends 'ConsultationBundle:Default:base.html.twig' %}
+
 
 {% block body %}
     <h1>Docteurs list</h1>
-
-    <table>
+<br>
+    <button  class="btn btn-info"><a href="{{ path('docteur_new') }}">Ajouter un docteur</a></button>
+    <br><br><br>
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Id</th>
@@ -23,10 +26,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('docteur_show', { 'id': docteur.id }) }}">show</a>
+                            <a href="{{ path('docteur_show', { 'id': docteur.id }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('docteur_edit', { 'id': docteur.id }) }}">edit</a>
+                            <a href="{{ path('docteur_edit', { 'id': docteur.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -35,9 +38,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('docteur_new') }}">Create a new docteur</a>
-        </li>
-    </ul>
+  
 {% endblock %}
