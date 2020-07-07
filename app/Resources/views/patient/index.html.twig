@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Liste des patients</h1>
     <br>
-    <button  class="btn btn-info"><a href="{{ path('patient_new') }}">Ajouter un patient</a></button>
+    <a href="{{ path('patient_new') }}" class="btn btn-primary">Ajouter un patient</a>
     <br><br><br>
     <table class="table table-hover">
         <thead>
@@ -25,7 +25,7 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('patient_show', { 'id': patient.id }) }}">afficher</a>
+                            <a href="{{ path('patient_show', { 'id': patient.id }) }}">Afficher</a>
                         </li>
                         <li>
                             <a href="{{ path('patient_edit', { 'id': patient.id }) }}">Modifier</a>

@@ -10,7 +10,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ConsultationBundle:Default:off.html.twig');
+        return $this->render('ConsultationBundle:Default:base.html.twig');
     }
 
  
